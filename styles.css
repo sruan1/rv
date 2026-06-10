@@ -177,6 +177,7 @@ input {
   height: 56px;
   justify-content: center;
   line-height: 22px;
+  min-height: 56px;
   min-width: 197px;
   padding: 0 24px;
   transition: background-color 160ms ease, transform 160ms ease;
@@ -535,7 +536,9 @@ input {
   }
 
   .primary-button {
-    flex: 1 1 100%;
+    flex: 0 0 auto;
+    height: 56px;
+    min-height: 56px;
     min-width: 0;
     width: 100%;
   }
