@@ -483,28 +483,55 @@ input {
 
 @media (max-width: 720px) {
   .benefit-hero {
+    align-items: center;
     box-shadow: none;
+    gap: 24px;
     min-height: 0;
-    padding: 32px 24px;
+    padding: 24px;
   }
 
   .hero-copy {
-    gap: 24px;
-    padding: 0;
+    display: contents;
+  }
+
+  .hero-header {
+    align-items: center;
+    max-width: none;
+    order: 1;
+    text-align: center;
+    width: 100%;
   }
 
   .hero-header h1 {
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 28px;
+    letter-spacing: -0.04px;
+    line-height: 34px;
   }
 
   .hero-header p {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 16px;
+    letter-spacing: -0.02px;
+    line-height: 22px;
   }
 
   .address-form {
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 8px;
+    order: 3;
     width: 100%;
+  }
+
+  .address-field {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .location-icon {
+    flex-basis: 24px;
+    height: 24px;
+    width: 24px;
   }
 
   .primary-button {
@@ -518,40 +545,110 @@ input {
   }
 
   .benefits-panel {
-    align-self: stretch;
+    align-self: center;
     flex-basis: auto;
-    height: auto;
+    height: 167px;
+    order: 2;
     overflow: visible;
     width: 100%;
   }
 
   .benefits-stage {
+    aspect-ratio: 327 / 126.727;
     height: auto;
-    width: 100%;
+    overflow: visible;
+    width: min(327px, 100%);
   }
 
   .benefit-card.side {
-    display: none;
+    border-radius: 9.052px;
+    border-width: 1.131px;
+    display: flex;
+    gap: 4.526px;
+    height: 75.89%;
+    padding: clamp(7px, 2.4vw, 9.052px) clamp(9px, 3.62vw, 13.578px);
+    top: 11.86%;
+    width: 27.68%;
   }
 
   .benefit-card.featured {
-    border-radius: 16px;
-    height: auto;
-    left: auto;
-    min-height: 180px;
-    padding: 22px;
-    position: relative;
-    top: auto;
-    width: 100%;
+    border-radius: 11.881px;
+    border-width: 1.485px;
+    gap: 5.94px;
+    height: 99.61%;
+    min-height: 0;
+    padding: clamp(9px, 3.17vw, 11.881px) clamp(13px, 4.75vw, 17.821px);
+    position: absolute;
+    top: 0;
+    width: 36.33%;
+  }
+
+  .benefit-card[data-position="previous"] {
+    left: 0;
+  }
+
+  .benefit-card[data-position="active"] {
+    left: 31.83%;
+  }
+
+  .benefit-card[data-position="next"] {
+    left: 72.32%;
+  }
+
+  .benefit-card[data-position="off-left"] {
+    left: -31.83%;
+  }
+
+  .benefit-card[data-position="off-right"] {
+    left: 104.15%;
+  }
+
+  .benefit-icon {
+    height: clamp(30px, 11.07vw, 36.208px);
+    width: clamp(30px, 11.07vw, 36.208px);
   }
 
   .featured .benefit-icon {
-    height: 72px;
-    width: 72px;
+    height: clamp(40px, 14.53vw, 47.522px);
+    width: clamp(40px, 14.53vw, 47.522px);
+  }
+
+  .benefit-card h2 {
+    font-size: clamp(8.2px, 2.41vw, 9.052px);
+    letter-spacing: -0.0113px;
+    line-height: clamp(11px, 3.32vw, 12.446px);
+    max-height: calc(clamp(11px, 3.32vw, 12.446px) * 3);
+  }
+
+  .benefit-card.side h2.compact-label {
+    font-size: clamp(7.8px, 2.27vw, 8.5px);
+    line-height: clamp(10.5px, 3.07vw, 11.5px);
+    max-height: calc(clamp(10.5px, 3.07vw, 11.5px) * 3);
   }
 
   .benefit-card.featured h2 {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: clamp(10px, 3.02vw, 11.315px);
+    line-height: clamp(13px, 3.92vw, 14.709px);
+  }
+
+  .carousel-controls {
+    margin-top: 16px;
+    width: min(327px, 100%);
+  }
+
+  .carousel-arrow,
+  .carousel-control {
+    height: 24px;
+    width: 24px;
+  }
+
+  .carousel-arrow .arrow-vector {
+    height: 7.5px;
+    width: 12px;
+  }
+
+  .carousel-control svg {
+    height: 14px;
+    width: 14px;
   }
 }
