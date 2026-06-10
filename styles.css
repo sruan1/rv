@@ -1,0 +1,557 @@
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/dm-sans-400.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./assets/fonts/dm-sans-700.ttf") format("truetype");
+}
+
+:root {
+  --text-neutral: #141417;
+  --text-muted: rgba(20, 20, 23, 0.6);
+  --theme-base: #f1ecf8;
+  --brand: #5a23b9;
+  --brand-subtle: #ded3f1;
+  --input-bg: #f6f6f9;
+  --input-border: #62626c;
+  --card-border: rgba(90, 35, 185, 0.15);
+  --card-bg: #ffffff;
+  --font-heading: "X Sans", "Aptos Display", "Inter", Arial, sans-serif;
+  --font-body: "DM Sans", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--theme-base);
+  color: var(--text-neutral);
+  font-family: var(--font-body);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  background: var(--theme-base);
+}
+
+.benefit-hero {
+  align-items: flex-start;
+  background: var(--theme-base);
+  border-radius: 8px;
+  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1), 0 20px 13px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 64px;
+  min-height: 444px;
+  overflow: hidden;
+  padding: 64px;
+  width: 100%;
+}
+
+.hero-copy {
+  align-items: flex-start;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 670px;
+  min-width: 0;
+  padding: 0 16px;
+}
+
+.hero-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 638px;
+}
+
+.hero-header h1 {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 52px;
+  margin: 0;
+}
+
+.hero-header p {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 26px;
+  margin: 0;
+}
+
+.address-form {
+  align-content: flex-end;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  max-width: 100%;
+  width: 416px;
+}
+
+.address-field {
+  align-items: center;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  display: flex;
+  flex: 1 0 100%;
+  gap: 16px;
+  height: 56px;
+  min-width: 0;
+  padding: 16px;
+}
+
+.location-icon {
+  fill: none;
+  flex: 0 0 16px;
+  height: 16px;
+  stroke: var(--text-neutral);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  width: 16px;
+}
+
+.address-field input {
+  background: transparent;
+  border: 0;
+  color: var(--text-neutral);
+  flex: 1 1 auto;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-variation-settings: "opsz" 14;
+  font-weight: 400;
+  height: 24px;
+  line-height: 22px;
+  min-width: 0;
+  outline: 0;
+}
+
+.address-field input::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
+.address-field:focus-within {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 2px rgba(90, 35, 185, 0.18);
+}
+
+.primary-button {
+  align-items: center;
+  background: var(--brand);
+  border: 0;
+  border-radius: 4px;
+  color: var(--input-bg);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  height: 56px;
+  justify-content: center;
+  line-height: 22px;
+  min-width: 197px;
+  padding: 0 24px;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.primary-button:hover {
+  background: #4c1b9f;
+}
+
+.primary-button:active {
+  transform: translateY(1px);
+}
+
+.primary-button:focus-visible,
+.carousel-arrow:focus-visible,
+.carousel-control:focus-visible,
+.info-link:focus-visible {
+  outline: 3px solid rgba(90, 35, 185, 0.3);
+  outline-offset: 3px;
+}
+
+.info-link {
+  color: var(--text-neutral);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 22px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+
+.benefits-panel {
+  align-items: center;
+  display: flex;
+  flex: 0 0 578px;
+  flex-direction: column;
+  height: 316px;
+  overflow: hidden;
+  width: 578px;
+}
+
+.benefits-stage {
+  flex: 0 0 auto;
+  height: 223.125px;
+  position: relative;
+  width: 578px;
+}
+
+.benefit-card {
+  align-items: center;
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
+  color: var(--text-neutral);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  transition:
+    left 560ms cubic-bezier(0.22, 1, 0.36, 1),
+    top 560ms cubic-bezier(0.22, 1, 0.36, 1),
+    width 560ms cubic-bezier(0.22, 1, 0.36, 1),
+    height 560ms cubic-bezier(0.22, 1, 0.36, 1),
+    padding 560ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 560ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-width 560ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 360ms ease,
+    transform 560ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: left, top, width, height, opacity, transform;
+}
+
+.benefit-card.side {
+  border-radius: 16px;
+  gap: 8px;
+  height: 170px;
+  padding: 16px 24px;
+  top: 26.56px;
+  width: 160px;
+}
+
+.benefit-card.featured {
+  border-radius: 21px;
+  border-width: 2.625px;
+  gap: 10.5px;
+  height: 223.125px;
+  left: 184px;
+  padding: 21px 31.5px;
+  top: 0;
+  width: 210px;
+}
+
+.benefit-card[data-position="previous"] {
+  left: 0;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.benefit-card[data-position="active"] {
+  left: 184px;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.benefit-card[data-position="next"] {
+  left: 418px;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.benefit-card[data-position="off-left"] {
+  left: -184px;
+  opacity: 0;
+  transform: scale(0.98);
+  z-index: 0;
+}
+
+.benefit-card[data-position="off-right"] {
+  left: 602px;
+  opacity: 0;
+  transform: scale(0.98);
+  z-index: 0;
+}
+
+.benefit-icon {
+  color: #9b7bf2;
+  display: grid;
+  flex: 0 0 auto;
+  height: 64px;
+  place-items: center;
+  width: 64px;
+}
+
+.featured .benefit-icon {
+  height: 84px;
+  width: 84px;
+}
+
+.benefit-icon,
+.benefit-card h2 {
+  transition:
+    width 560ms cubic-bezier(0.22, 1, 0.36, 1),
+    height 560ms cubic-bezier(0.22, 1, 0.36, 1),
+    font-size 560ms cubic-bezier(0.22, 1, 0.36, 1),
+    line-height 560ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.benefit-icon svg {
+  display: block;
+  filter: drop-shadow(0 5px 4px rgba(90, 35, 185, 0.15));
+  height: 100%;
+  overflow: visible;
+  width: 100%;
+}
+
+.benefit-icon img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  width: 100%;
+}
+
+.benefit-card h2 {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin: 0;
+  max-width: 100%;
+}
+
+.benefit-card.side h2 {
+  display: -webkit-box;
+  max-height: 60px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.benefit-card.side h2.compact-label {
+  font-size: 15px;
+  line-height: 19px;
+  max-height: 57px;
+}
+
+.benefit-card.featured h2 {
+  font-size: 20px;
+  line-height: 26px;
+  max-height: none;
+  overflow: visible;
+}
+
+.carousel-controls {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.carousel-arrow,
+.carousel-control {
+  align-items: center;
+  background: var(--brand-subtle);
+  border: 0;
+  border-radius: 999px;
+  color: var(--brand);
+  cursor: pointer;
+  display: grid;
+  flex: 0 0 auto;
+  height: 32px;
+  justify-content: center;
+  padding: 0;
+  width: 32px;
+}
+
+.carousel-arrow {
+  opacity: 1;
+  transition: opacity 160ms ease, visibility 160ms ease;
+  visibility: visible;
+}
+
+.carousel-arrow:disabled {
+  cursor: default;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.carousel-arrow:not(:disabled):hover,
+.carousel-control:hover {
+  background: #d2c2ef;
+}
+
+.carousel-arrow:not(:disabled):active,
+.carousel-control:active {
+  transform: translateY(1px);
+}
+
+.carousel-arrow .arrow-vector {
+  display: block;
+  height: 10px;
+  pointer-events: none;
+  width: 16px;
+}
+
+.carousel-arrow .arrow-vector--next {
+  transform: rotate(180deg);
+}
+
+.carousel-control svg {
+  fill: currentColor;
+  height: 18px;
+  width: 18px;
+}
+
+.carousel-control .play-icon {
+  display: none;
+}
+
+.carousel-control.is-paused .pause-icon {
+  display: none;
+}
+
+.carousel-control.is-paused .play-icon {
+  display: block;
+}
+
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media (max-width: 1180px) {
+  .benefit-hero {
+    flex-direction: column;
+    gap: 40px;
+    padding: 48px;
+  }
+
+  .hero-copy {
+    max-width: 760px;
+  }
+
+  .benefits-panel {
+    align-self: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .benefit-hero {
+    box-shadow: none;
+    min-height: 0;
+    padding: 32px 24px;
+  }
+
+  .hero-copy {
+    gap: 24px;
+    padding: 0;
+  }
+
+  .hero-header h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .hero-header p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .address-form {
+    width: 100%;
+  }
+
+  .primary-button {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .info-link {
+    margin: 4px auto 0;
+  }
+
+  .benefits-panel {
+    align-self: stretch;
+    flex-basis: auto;
+    height: auto;
+    overflow: visible;
+    width: 100%;
+  }
+
+  .benefits-stage {
+    height: auto;
+    width: 100%;
+  }
+
+  .benefit-card.side {
+    display: none;
+  }
+
+  .benefit-card.featured {
+    border-radius: 16px;
+    height: auto;
+    left: auto;
+    min-height: 180px;
+    padding: 22px;
+    position: relative;
+    top: auto;
+    width: 100%;
+  }
+
+  .featured .benefit-icon {
+    height: 72px;
+    width: 72px;
+  }
+
+  .benefit-card.featured h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

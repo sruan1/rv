@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Benefit Highlight Hero</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="benefit-hero" aria-labelledby="hero-title" data-node-id="12230:2310">
+        <div class="hero-copy">
+          <div class="hero-header">
+            <h1 id="hero-title">Reliable WiFi. Real value. From $40/mo.</h1>
+            <p>Get the most reliable WiFi with more value included. Plans start at $40/mo for 5 years.</p>
+          </div>
+
+          <form class="address-form" aria-label="Check availability">
+            <label class="address-field">
+              <span class="sr-only">Enter your address</span>
+              <svg class="location-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21s7-6.27 7-12a7 7 0 1 0-14 0c0 5.73 7 12 7 12Z" />
+                <circle cx="12" cy="9" r="2.4" />
+              </svg>
+              <input type="text" autocomplete="street-address" placeholder="Enter your address" />
+            </label>
+            <button class="primary-button" type="submit">Check availability</button>
+            <a class="info-link" href="#" aria-label="Pricing and other info">Pricing &amp; other info</a>
+          </form>
+        </div>
+
+        <div class="benefits-panel" aria-label="Included benefits">
+          <div class="benefits-stage" aria-live="polite">
+            <article class="benefit-card side" data-slot="previous"></article>
+            <article class="benefit-card featured" data-slot="active"></article>
+            <article class="benefit-card side" data-slot="next"></article>
+          </div>
+
+          <div class="carousel-controls" aria-label="Benefit carousel controls">
+            <button class="carousel-arrow" type="button" data-direction="previous" aria-label="Previous benefit" disabled>
+              <img class="arrow-vector" src="./assets/icons/arrow-left-figma.svg" alt="" aria-hidden="true" />
+            </button>
+
+            <button class="carousel-control" type="button" aria-label="Pause benefit carousel" aria-pressed="false">
+              <svg class="pause-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="7" y="6" width="3" height="12" rx="1" />
+                <rect x="14" y="6" width="3" height="12" rx="1" />
+              </svg>
+              <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5.8v12.4c0 .78.85 1.26 1.52.86l9.9-6.2a1 1 0 0 0 0-1.72l-9.9-6.2A1 1 0 0 0 8 5.8Z" />
+              </svg>
+            </button>
+
+            <button class="carousel-arrow" type="button" data-direction="next" aria-label="Next benefit" disabled>
+              <img class="arrow-vector arrow-vector--next" src="./assets/icons/arrow-left-figma.svg" alt="" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
